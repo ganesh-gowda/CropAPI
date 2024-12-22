@@ -1,4 +1,10 @@
+import uvicorn 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from CROP import CROP
+import numpy as np
+import pandas as pd
+import pickle
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
